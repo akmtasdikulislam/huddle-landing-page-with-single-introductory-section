@@ -1,0 +1,39 @@
+/* font-family: "Poppins",
+sans-serif;
+font-family: "Open Sans",
+sans-serif; */
+:root {
+    /* Colours */
+
+    --violet      : hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+/* Initialization */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin    : 0;
+    padding   : 0;
+}
+
+body {
+    min-width : 100vw;
+    min-height: 100vh;
+    overflow  : hidden;
+    font-family: "Open Sans",
+        sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins",
+        sans-serif;
+    font-weight: 600;
+}
