@@ -19,12 +19,20 @@ sans-serif; */
 }
 
 body {
-    min-width : 100vw;
-    min-height: 100vh;
-    overflow  : hidden;
-    font-family: "Open Sans",
-        sans-serif;
-    font-weight: 400;
+    background-color : var(--violet);
+    background-image : url("./images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size  : cover;
+    color            : white;
+    display          : flex;
+    flex-direction   : column;
+    font-family      : "Open Sans", sans-serif;
+    font-weight      : 400;
+    justify-content  : space-between;
+    min-height       : 100vh;
+    min-width        : 100vw;
+    overflow         : hidden;
+    padding          : 4em;
 }
 
 h1,
@@ -33,7 +41,142 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Poppins",
-        sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
+}
+
+
+main {
+    align-items    : center;
+    display        : flex;
+    flex-direction : row;
+    gap            : 3em;
+    height         : max-content;
+    justify-content: space-between;
+    width          : 100%;
+}
+
+main aside {
+    width: 60%;
+}
+
+main article {
+    width: 40%;
+}
+
+main aside img {
+    width    : 100%;
+    max-width: 50em;
+}
+
+main article h2 {
+    font-size    : 2.5em;
+    margin-bottom: .5em;
+}
+
+main article p {
+    font-size  : 1.1em;
+    line-height: 1.75em;
+}
+
+main article button {
+    background-color: white;
+    border          : 0;
+    border-radius   : 5em 5em;
+    color           : var(--violet);
+    font-family     : "Open Sans", sans-serif;
+    font-size       : .95em;
+    font-weight     : 500;
+    height          : max-content;
+    margin-top      : 1.5em;
+    outline         : 0;
+    padding         : 1em 4em;
+    text-align      : center;
+    width           : max-content;
+}
+
+main article button:hover {
+    background-color: var(--soft-magenta);
+    color           : white;
+    cursor          : pointer;
+    transition      : all ease-in-out .2s;
+}
+
+footer {
+    text-align: right;
+}
+
+.icon {
+    border       : 1px solid white;
+    border-radius: 50%;
+    color        : white;
+    font-size    : 1em;
+    height       : 2em;
+    line-height  : 0;
+    margin       : 0;
+    margin-left  : .5em;
+    padding      : .5em;
+    width        : 2em;
+}
+
+.icon:hover {
+    border-color: var(--soft-magenta);
+    color       : var(--soft-magenta);
+    cursor      : pointer;
+    transition  : all ease-in-out .2s;
+}
+
+.attribution {
+    bottom    : 3em;
+    font-size : 1em;
+    left      : 50%;
+    position  : absolute;
+    text-align: center;
+    transform : translateX(-50%);
+}
+
+.attribution a {
+    color: var(--soft-magenta)
+}
+
+@media (max-width:375px) {
+    body {
+        background-image: url("./images/bg-mobile.svg");
+        background-size : contain;
+        flex-direction  : column;
+        padding         : 2em;
+    }
+
+    header img {
+        width: 50%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main aside {
+        width: 100%;
+    }
+
+    main article {
+        width     : 100%;
+        text-align: center;
+    }
+
+    main article h2 {
+        font-size: 1.75em;
+    }
+
+    main article p {
+        font-size: 1em;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .attribution {
+        display: none;
+    }
 }
